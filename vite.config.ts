@@ -17,7 +17,6 @@ export default defineConfig({
       formats: ['es', 'umd'],
       fileName: (format) => `my-lib.${format}.js`,
     }
-	/*
 	,rollupOptions: {
       external: ['react', 'react-dom', 'styled-components'],
       output: {
@@ -27,7 +26,7 @@ export default defineConfig({
           'styled-components': 'styled',
         },
       },
-    },*/
+    },
   },
   css: {
     modules: true, // Active les modules CSS

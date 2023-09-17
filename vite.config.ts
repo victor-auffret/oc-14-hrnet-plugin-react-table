@@ -15,7 +15,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'MyLib',
       formats: ['es', 'umd'],
-      fileName: (format) => `my-lib.${format}.js`,
+      fileName: (format) => `data-table.${format}.js`,
     }
 	,rollupOptions: {
       external: ['react', 'react-dom', 'styled-components'],

@@ -1,6 +1,7 @@
 import { FunctionComponent, useCallback, useMemo, useState } from 'react';
 
-import "./style.css"
+//import "./style.css"
+import style from "./data-table.module.css"
 
 const SHOW = [10, 25, 50, 100]
 
@@ -171,7 +172,7 @@ const DataTableComponent: FunctionComponent<IProps> = (props: IProps = {
       </label>
     </div>
 
-    <table id="employee-table" className="display dataTable">
+    <table id="employee-table" /*className="display dataTable"*/ className={style.dataTable}>
 
       {theadOrderLine}
 

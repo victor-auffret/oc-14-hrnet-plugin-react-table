@@ -626,9 +626,7 @@ Check the top-level render call using <` + t + ">.");
 }
 process.env.NODE_ENV === "production" ? de.exports = fr() : de.exports = dr();
 var d = de.exports;
-const vr = "_dataTable_19so0_1", pr = {
-  dataTable: vr
-}, fe = [10, 25, 50, 100], mr = (x = {
+const fe = [10, 25, 50, 100], pr = (x = {
   data: [],
   columns: [],
   listNbPerPage: fe
@@ -704,7 +702,7 @@ const vr = "_dataTable_19so0_1", pr = {
       "Search:",
       /* @__PURE__ */ d.jsx("input", { type: "text", name: "search", id: "search", "aria-controls": "employee-table", onChange: w })
     ] }) }),
-    /* @__PURE__ */ d.jsxs("table", { id: "employee-table", className: pr.dataTable, children: [
+    /* @__PURE__ */ d.jsxs("table", { id: "employee-table", className: "display dataTable", children: [
       ee,
       /* @__PURE__ */ d.jsx("tbody", { children: V.filter((c, i) => {
         const u = P * g[_], L = u + g[_];
@@ -766,5 +764,5 @@ const vr = "_dataTable_19so0_1", pr = {
   ] });
 };
 export {
-  mr as DataTableComponent
+  pr as DataTableComponent
 };

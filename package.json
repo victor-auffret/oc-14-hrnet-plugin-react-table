@@ -2,7 +2,6 @@
   "name": "oc-14-hrnet-plugin-react-table",
   "version": "1.0.0",
   "description": "pluggin jquery to react",
-  "source": "./lib/index.js",
   "main": "./dist/my-lib.umd.js",
   "module": "./dist/my-lib.es.js",
   "types": "./dist/index.d.ts",

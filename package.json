@@ -25,6 +25,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "vite": "^4.4.9",
     "vite-plugin-dts": "^3.5.3"
   },
   "devDependencies": {
@@ -36,8 +37,7 @@
     "eslint": "^8.49.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "typescript": "^5.2.2",
-    "vite": "^4.4.9"
+    "typescript": "^5.2.2"
   },
   "author": "victor-auffret",
   "license": "MIT",

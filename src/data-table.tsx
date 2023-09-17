@@ -1,6 +1,6 @@
 import { FunctionComponent, useCallback, useMemo, useState } from 'react';
 
-import "./index.css"
+import "./style.css"
 
 const SHOW = [10, 25, 50, 100]
 
@@ -239,5 +239,7 @@ const DataTableComponent: FunctionComponent<IProps> = (props: IProps = {
   </div>
 
 }
+
+export type { IColumn, IProps }
 
 export { DataTableComponent }

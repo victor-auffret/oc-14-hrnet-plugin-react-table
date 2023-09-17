@@ -1,0 +1,57 @@
+{
+  "name": "oc-14-hrnet-plugin-react-table",
+  "version": "1.0.0",
+  "description": "pluggin jquery to react",
+  "source": "./lib/index.js",
+  "main": "index.js",
+  "module": "./lib/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "node": "./lib/index.mjs",
+      "types": "./lib/index.d.ts",
+      "default": "./lib/index.js"
+    }
+  },
+  "files": [
+    "lib/index.js",
+    "lib/index.mjs",
+    "lib/index.d.ts"
+  ],
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "@vitejs/plugin-react": "^4.0.4",
+    "eslint": "^8.49.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9"
+  },
+  "author": "victor-auffret",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victor-auffret/oc-14-hrnet-plugin-react-table.git"
+  },
+  "bugs": {
+    "url": "https://github.com/victor-auffret/oc-14-hrnet-plugin-react-table/issues"
+  },
+  "homepage": "https://github.com/victor-auffret/oc-14-hrnet-plugin-react-table#readme"
+}

@@ -46,12 +46,20 @@ const DataTableComponent: FunctionComponent<IProps> = (props: IProps = {
   // critère de tri + ordre croissant ou décroissant de tri
   const [critereTri, setCritereTri] = useState(columns[0].data ?? "")
   const [desc, setDesc] = useState(false)
+  
+  // page courrante 
+  const [currentPage, setCurrentPage] = useState(0)
 
   // champ de recherche pour filtrer les lignes
   const [search, setSearch] = useState("")
 
   // on input change : on change la valeur de search pour filtrer
-  const handleSearch = (e: any) => setSearch(e.target.value)
+  const handleSearch = (e: any) => {
+	  if (search != e.target.value) {
+		  setSearch(e.target.value)
+		  setCurrentPage(0)
+	  }
+  }
 
   // étape 1 : filtrer les résultats
   const filtredResult = useMemo(() => {
@@ -74,7 +82,7 @@ const DataTableComponent: FunctionComponent<IProps> = (props: IProps = {
 
 
   // pagination
-  const [currentPage, setCurrentPage] = useState(0)
+  
   const canPrev = useMemo(() => currentPage > 0, [currentPage])
   const canNext = useMemo(() =>
     (currentPage + 1) * listNbPerPage[maxPerPageIndex] < filtredResult.length,

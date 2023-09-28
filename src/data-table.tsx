@@ -201,7 +201,7 @@ const DataTableComponent: FunctionComponent<IProps> = (props: IProps = {
     </table>
 
     <div className="dataTables_info" id="employee-table_info" role="status">
-      Showing {currentPage * listNbPerPage[maxPerPageIndex] + 1} to {Math.min(data.length, currentPage * listNbPerPage[maxPerPageIndex] + listNbPerPage[maxPerPageIndex])} of {data.length} entries
+      Showing {currentPage * listNbPerPage[maxPerPageIndex] + 1} to {Math.min(sortedResult.length, currentPage * listNbPerPage[maxPerPageIndex] + listNbPerPage[maxPerPageIndex])} of {sortedResult.length} entries
     </div>
 
     <div className="dataTables_paginate paging_simple_numbers" id="employee-table_paginate">

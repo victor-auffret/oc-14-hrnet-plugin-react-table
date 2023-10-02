@@ -1,4 +1,4 @@
-import We, { useMemo as D, useState as q, useCallback as Ae } from "react";
+import We, { useMemo as $, useState as q, useCallback as Ae } from "react";
 var de = { exports: {} }, B = {};
 /**
  * @license React
@@ -65,10 +65,10 @@ function dr() {
         l.unshift("Warning: " + r), Function.prototype.apply.call(console[e], console, l);
       }
     }
-    var ee = !1, $ = !1, re = !1, c = !1, i = !1, u;
+    var ee = !1, D = !1, re = !1, c = !1, i = !1, u;
     u = Symbol.for("react.module.reference");
     function L(e) {
-      return !!(typeof e == "string" || typeof e == "function" || e === m || e === N || i || e === y || e === k || e === f || c || e === A || ee || $ || re || typeof e == "object" && e !== null && (e.$$typeof === R || e.$$typeof === b || e.$$typeof === E || e.$$typeof === j || e.$$typeof === p || // This needs to include all possible module reference object
+      return !!(typeof e == "string" || typeof e == "function" || e === m || e === N || i || e === y || e === k || e === f || c || e === A || ee || D || re || typeof e == "object" && e !== null && (e.$$typeof === R || e.$$typeof === b || e.$$typeof === E || e.$$typeof === j || e.$$typeof === p || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
@@ -631,9 +631,9 @@ const fe = [10, 25, 50, 100], pr = (T = {
   columns: [],
   listNbPerPage: fe
 }) => {
-  const P = D(() => T.data, [T.data]), O = D(() => T.columns, [T.columns]), m = D(() => T.listNbPerPage.length > 0 ? T.listNbPerPage : fe, [T.listNbPerPage]), [y, N] = q(0), [E, j] = q(O[0].data ?? ""), [p, k] = q(!1), [f, b] = q(0), [R, A] = q(""), G = (c) => {
+  const P = $(() => T.data, [T.data]), O = $(() => T.columns, [T.columns]), m = $(() => T.listNbPerPage.length > 0 ? T.listNbPerPage : fe, [T.listNbPerPage]), [y, N] = q(0), [E, j] = q(O[0].data ?? ""), [p, k] = q(!1), [f, b] = q(0), [R, A] = q(""), G = (c) => {
     R != c.target.value && (A(c.target.value), b(0));
-  }, I = D(() => {
+  }, I = $(() => {
     if (R == "")
       return P;
     let c = [];
@@ -646,14 +646,14 @@ const fe = [10, 25, 50, 100], pr = (T = {
         }
     }
     return c;
-  }, [P, R]), M = D(() => f > 0, [f]), C = D(
+  }, [P, R]), M = $(() => f > 0, [f]), C = $(
     () => (f + 1) * m[y] < I.length,
     [f, m, y, I.length]
   ), g = Ae(() => {
     M && b((c) => c - 1);
   }, [M]), Q = Ae(() => {
     C && b((c) => c + 1);
-  }, [C]), ee = D(() => {
+  }, [C]), ee = $(() => {
     const c = (i) => () => {
       document.querySelectorAll(".sorting, .sorting_asc, .sorting_desc").forEach((u) => {
         u.classList.remove("sorting_asc"), u.classList.remove("sorting_desc"), u.classList.remove("sorting"), u.id != `col-${i.toLowerCase().split(" ").join("-")}` ? u.classList.add("sorting") : u.classList.add(`sorting${p ? "_asc" : "_desc"}`);
@@ -672,7 +672,7 @@ const fe = [10, 25, 50, 100], pr = (T = {
         `col-${u}`
       )
     ) }) });
-  }, [O, E, p]), $ = D(() => {
+  }, [O, E, p]), D = $(() => {
     let c = I.sort((i, u) => {
       if (E in i && E in u) {
         if (i[E] < u[E])
@@ -706,7 +706,7 @@ const fe = [10, 25, 50, 100], pr = (T = {
     ] }) }),
     /* @__PURE__ */ v.jsxs("table", { id: "employee-table", className: "display dataTable", children: [
       ee,
-      /* @__PURE__ */ v.jsx("tbody", { children: $.filter((c, i) => {
+      /* @__PURE__ */ v.jsx("tbody", { children: D.filter((c, i) => {
         const u = f * m[y], L = u + m[y];
         return u <= i && i < L;
       }).map(
@@ -715,11 +715,11 @@ const fe = [10, 25, 50, 100], pr = (T = {
     ] }),
     /* @__PURE__ */ v.jsxs("div", { className: "dataTables_info", id: "employee-table_info", role: "status", children: [
       "Showing ",
-      f * m[y] + 1,
+      D.length == 0 ? 0 : f * m[y] + 1,
       " to ",
-      Math.min($.length, f * m[y] + m[y]),
+      Math.min(D.length, f * m[y] + m[y]),
       " of ",
-      $.length,
+      D.length,
       " entries"
     ] }),
     /* @__PURE__ */ v.jsxs("div", { className: "dataTables_paginate paging_simple_numbers", id: "employee-table_paginate", children: [
@@ -736,7 +736,7 @@ const fe = [10, 25, 50, 100], pr = (T = {
         }
       ),
       /* @__PURE__ */ v.jsx("span", { children: Array.from(
-        Array(($.length - $.length % m[y]) / m[y] + 1),
+        Array((D.length - D.length % m[y]) / m[y] + 1),
         (c, i) => /* @__PURE__ */ v.jsx(
           "a",
           {

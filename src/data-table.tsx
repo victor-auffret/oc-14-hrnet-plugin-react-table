@@ -1,32 +1,28 @@
 import { FunctionComponent, useCallback, useMemo, useState } from 'react';
 
 import "./style.css"
-//import style from "./data-table.module.css"
 
 const SHOW = [10, 25, 50, 100]
 
 interface IColumn {
-  title: string,
-  data: string
+  title: string, /* l'intitulé de la colonne (peut contenir des espaces) */
+  data: string /* le nom de la propriété de data à utiliser (ne contient pas d'espace) */
 }
 
 interface IProps {
-  data: any[],
+  data: any[], /* oblige de garder any pour s'adapter aux utilisations */
   columns: IColumn[],
   listNbPerPage: number[]
 }
 
-// TODO 
-
-/*
-0.1) récupérer tout les élements du storage (déjà fait)
-0.2) copie ces éléments dans un state
-1) appliquer un filtre sur ces éléments (search)
-2) appliquer un tri (sort) sur ces éléments 
-3) appliquer le système de pagination
-4) afficher le résultat
-*/
-
+/**
+ * DataTableComponent : Composant réact pour afficher un tableau de donnée avec un système de tri et de pagination
+ * @param props 
+ *  - data : les données à afficher, paramètre sous forme de tableau d'objet
+ *  - columns : un tableau contenant la liste des propriétés de data à afficher en tant que colonne du tableau
+ *  - listNbPerPage : un paramètre optionnel qui est un tableau contenant les entiers symbolisant le nombre d'élément par page (par défaut on a 10, 25, 50 et 100 éléments par page au choix)
+ * @returns Composant React DataTableComponent
+ */
 const DataTableComponent: FunctionComponent<IProps> = (props: IProps = {
   data: [],
   columns: [],
@@ -46,7 +42,7 @@ const DataTableComponent: FunctionComponent<IProps> = (props: IProps = {
   // critère de tri + ordre croissant ou décroissant de tri
   const [critereTri, setCritereTri] = useState(columns[0].data ?? "")
   const [desc, setDesc] = useState(false)
-  
+
   // page courrante 
   const [currentPage, setCurrentPage] = useState(0)
 
@@ -55,10 +51,10 @@ const DataTableComponent: FunctionComponent<IProps> = (props: IProps = {
 
   // on input change : on change la valeur de search pour filtrer
   const handleSearch = (e: any) => {
-	  if (search != e.target.value) {
-		  setSearch(e.target.value)
-		  setCurrentPage(0)
-	  }
+    if (search != e.target.value) {
+      setSearch(e.target.value)
+      setCurrentPage(0)
+    }
   }
 
   // étape 1 : filtrer les résultats
@@ -82,7 +78,7 @@ const DataTableComponent: FunctionComponent<IProps> = (props: IProps = {
 
 
   // pagination
-  
+
   const canPrev = useMemo(() => currentPage > 0, [currentPage])
   const canNext = useMemo(() =>
     (currentPage + 1) * listNbPerPage[maxPerPageIndex] < filtredResult.length,
@@ -144,10 +140,11 @@ const DataTableComponent: FunctionComponent<IProps> = (props: IProps = {
   const sortedResult = useMemo(() => {
     let order = filtredResult.sort((a, b) => {
       if (critereTri in a && critereTri in b) {
-        if (a[critereTri] < b[critereTri]) {
+        // on passe en minuscule car sinon on a Abb < aaa
+        if (a[critereTri].toLocaleLowerCase() < b[critereTri].toLocaleLowerCase()) {
           return 1
         }
-        if (a[critereTri] > b[critereTri]) {
+        if (a[critereTri].toLocaleLowerCase() > b[critereTri].toLocaleLowerCase()) {
           return -1
         }
       }
@@ -201,7 +198,7 @@ const DataTableComponent: FunctionComponent<IProps> = (props: IProps = {
     </table>
 
     <div className="dataTables_info" id="employee-table_info" role="status">
-      Showing { sortedResult.length == 0 ? 0 : (currentPage * listNbPerPage[maxPerPageIndex] + 1) } to {Math.min(sortedResult.length, currentPage * listNbPerPage[maxPerPageIndex] + listNbPerPage[maxPerPageIndex])} of {sortedResult.length} entries
+      Showing {sortedResult.length == 0 ? 0 : (currentPage * listNbPerPage[maxPerPageIndex] + 1)} to {Math.min(sortedResult.length, currentPage * listNbPerPage[maxPerPageIndex] + listNbPerPage[maxPerPageIndex])} of {sortedResult.length} entries
     </div>
 
     <div className="dataTables_paginate paging_simple_numbers" id="employee-table_paginate">

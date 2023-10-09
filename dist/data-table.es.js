@@ -9,12 +9,12 @@ var de = { exports: {} }, B = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var Ie;
+var Le;
 function fr() {
-  if (Ie)
+  if (Le)
     return B;
-  Ie = 1;
-  var T = We, P = Symbol.for("react.element"), O = Symbol.for("react.fragment"), m = Object.prototype.hasOwnProperty, y = T.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, N = { key: !0, ref: !0, __self: !0, __source: !0 };
+  Le = 1;
+  var T = We, C = Symbol.for("react.element"), O = Symbol.for("react.fragment"), m = Object.prototype.hasOwnProperty, y = T.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, N = { key: !0, ref: !0, __self: !0, __source: !0 };
   function E(j, p, k) {
     var f, b = {}, R = null, A = null;
     k !== void 0 && (R = "" + k), p.key !== void 0 && (R = "" + p.key), p.ref !== void 0 && (A = p.ref);
@@ -23,7 +23,7 @@ function fr() {
     if (j && j.defaultProps)
       for (f in p = j.defaultProps, p)
         b[f] === void 0 && (b[f] = p[f]);
-    return { $$typeof: P, type: j, key: R, ref: A, props: b, _owner: y.current };
+    return { $$typeof: C, type: j, key: R, ref: A, props: b, _owner: y.current };
   }
   return B.Fragment = O, B.jsx = E, B.jsxs = E, B;
 }
@@ -37,17 +37,17 @@ var J = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var Le;
+var Ie;
 function dr() {
-  return Le || (Le = 1, process.env.NODE_ENV !== "production" && function() {
-    var T = We, P = Symbol.for("react.element"), O = Symbol.for("react.portal"), m = Symbol.for("react.fragment"), y = Symbol.for("react.strict_mode"), N = Symbol.for("react.profiler"), E = Symbol.for("react.provider"), j = Symbol.for("react.context"), p = Symbol.for("react.forward_ref"), k = Symbol.for("react.suspense"), f = Symbol.for("react.suspense_list"), b = Symbol.for("react.memo"), R = Symbol.for("react.lazy"), A = Symbol.for("react.offscreen"), G = Symbol.iterator, I = "@@iterator";
+  return Ie || (Ie = 1, process.env.NODE_ENV !== "production" && function() {
+    var T = We, C = Symbol.for("react.element"), O = Symbol.for("react.portal"), m = Symbol.for("react.fragment"), y = Symbol.for("react.strict_mode"), N = Symbol.for("react.profiler"), E = Symbol.for("react.provider"), j = Symbol.for("react.context"), p = Symbol.for("react.forward_ref"), k = Symbol.for("react.suspense"), f = Symbol.for("react.suspense_list"), b = Symbol.for("react.memo"), R = Symbol.for("react.lazy"), A = Symbol.for("react.offscreen"), G = Symbol.iterator, L = "@@iterator";
     function M(e) {
       if (e === null || typeof e != "object")
         return null;
-      var r = G && e[G] || e[I];
+      var r = G && e[G] || e[L];
       return typeof r == "function" ? r : null;
     }
-    var C = T.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+    var P = T.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
     function g(e) {
       {
         for (var r = arguments.length, t = new Array(r > 1 ? r - 1 : 0), a = 1; a < r; a++)
@@ -57,7 +57,7 @@ function dr() {
     }
     function Q(e, r, t) {
       {
-        var a = C.ReactDebugCurrentFrame, s = a.getStackAddendum();
+        var a = P.ReactDebugCurrentFrame, s = a.getStackAddendum();
         s !== "" && (r += "%s", t = t.concat([s]));
         var l = t.map(function(o) {
           return String(o);
@@ -67,7 +67,7 @@ function dr() {
     }
     var ee = !1, D = !1, re = !1, c = !1, i = !1, u;
     u = Symbol.for("react.module.reference");
-    function L(e) {
+    function I(e) {
       return !!(typeof e == "string" || typeof e == "function" || e === m || e === N || i || e === y || e === k || e === f || c || e === A || ee || D || re || typeof e == "object" && e !== null && (e.$$typeof === R || e.$$typeof === b || e.$$typeof === E || e.$$typeof === j || e.$$typeof === p || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
@@ -191,7 +191,7 @@ function dr() {
         V < 0 && g("disabledDepth fell below zero. This is a bug in React. Please file an issue.");
       }
     }
-    var ae = C.ReactCurrentDispatcher, ne;
+    var ae = P.ReactCurrentDispatcher, ne;
     function z(e, r, t) {
       {
         if (ne === void 0)
@@ -317,7 +317,7 @@ function dr() {
         }
       return "";
     }
-    var X = Object.prototype.hasOwnProperty, xe = {}, Te = C.ReactDebugCurrentFrame;
+    var X = Object.prototype.hasOwnProperty, xe = {}, Te = P.ReactDebugCurrentFrame;
     function Z(e) {
       if (e) {
         var r = e._owner, t = K(e.type, e._source, r ? r.type : null);
@@ -356,19 +356,19 @@ function dr() {
     }
     function ze(e) {
       try {
-        return Pe(e), !1;
+        return Ce(e), !1;
       } catch {
         return !0;
       }
     }
-    function Pe(e) {
+    function Ce(e) {
       return "" + e;
     }
-    function Ce(e) {
+    function Pe(e) {
       if (ze(e))
-        return g("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", Ge(e)), Pe(e);
+        return g("The provided key is an unsupported type %s. This value must be coerced to a string before before using it here.", Ge(e)), Ce(e);
     }
-    var U = C.ReactCurrentOwner, He = {
+    var U = P.ReactCurrentOwner, He = {
       key: !0,
       ref: !0,
       __self: !0,
@@ -422,7 +422,7 @@ function dr() {
     var rr = function(e, r, t, a, s, l, o) {
       var n = {
         // This tag allows us to uniquely identify this as a React Element
-        $$typeof: P,
+        $$typeof: C,
         // Built-in properties that belong on the element
         type: e,
         key: r,
@@ -451,7 +451,7 @@ function dr() {
     function tr(e, r, t, a, s) {
       {
         var l, o = {}, n = null, _ = null;
-        t !== void 0 && (Ce(t), n = "" + t), Xe(r) && (Ce(r.key), n = "" + r.key), Ke(r) && (_ = r.ref, Ze(r, s));
+        t !== void 0 && (Pe(t), n = "" + t), Xe(r) && (Pe(r.key), n = "" + r.key), Ke(r) && (_ = r.ref, Ze(r, s));
         for (l in r)
           X.call(r, l) && !He.hasOwnProperty(l) && (o[l] = r[l]);
         if (e && e.defaultProps) {
@@ -466,7 +466,7 @@ function dr() {
         return rr(e, n, _, s, a, U.current, o);
       }
     }
-    var le = C.ReactCurrentOwner, Se = C.ReactDebugCurrentFrame;
+    var le = P.ReactCurrentOwner, Se = P.ReactDebugCurrentFrame;
     function W(e) {
       if (e) {
         var r = e._owner, t = K(e.type, e._source, r ? r.type : null);
@@ -477,7 +477,7 @@ function dr() {
     var ue;
     ue = !1;
     function ce(e) {
-      return typeof e == "object" && e !== null && e.$$typeof === P;
+      return typeof e == "object" && e !== null && e.$$typeof === C;
     }
     function Oe() {
       {
@@ -586,14 +586,14 @@ Check the top-level render call using <` + t + ">.");
     }
     function Fe(e, r, t, a, s, l) {
       {
-        var o = L(e);
+        var o = I(e);
         if (!o) {
           var n = "";
           (e === void 0 || typeof e == "object" && e !== null && Object.keys(e).length === 0) && (n += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.");
           var _ = ar(s);
           _ ? n += _ : n += Oe();
           var d;
-          e === null ? d = "null" : ie(e) ? d = "array" : e !== void 0 && e.$$typeof === P ? (d = "<" + (w(e.type) || "Unknown") + " />", n = " Did you accidentally export a JSX literal instead of a component?") : d = typeof e, g("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", d, n);
+          e === null ? d = "null" : ie(e) ? d = "array" : e !== void 0 && e.$$typeof === C ? (d = "<" + (w(e.type) || "Unknown") + " />", n = " Did you accidentally export a JSX literal instead of a component?") : d = typeof e, g("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", d, n);
         }
         var h = tr(e, r, t, s, l);
         if (h == null)
@@ -631,29 +631,29 @@ const fe = [10, 25, 50, 100], pr = (T = {
   columns: [],
   listNbPerPage: fe
 }) => {
-  const P = $(() => T.data, [T.data]), O = $(() => T.columns, [T.columns]), m = $(() => T.listNbPerPage.length > 0 ? T.listNbPerPage : fe, [T.listNbPerPage]), [y, N] = q(0), [E, j] = q(O[0].data ?? ""), [p, k] = q(!1), [f, b] = q(0), [R, A] = q(""), G = (c) => {
+  const C = $(() => T.data, [T.data]), O = $(() => T.columns, [T.columns]), m = $(() => T.listNbPerPage.length > 0 ? T.listNbPerPage : fe, [T.listNbPerPage]), [y, N] = q(0), [E, j] = q(O[0].data ?? ""), [p, k] = q(!1), [f, b] = q(0), [R, A] = q(""), G = (c) => {
     R != c.target.value && (A(c.target.value), b(0));
-  }, I = $(() => {
+  }, L = $(() => {
     if (R == "")
-      return P;
+      return C;
     let c = [];
-    for (let i = 0; i < P.length; i++) {
+    for (let i = 0; i < C.length; i++) {
       let u = !1;
-      for (const [L, te] of Object.entries(P[i]))
+      for (const [I, te] of Object.entries(C[i]))
         if (!u && te.toLowerCase().includes(R.toLowerCase())) {
-          c.push(P[i]), u = !0;
+          c.push(C[i]), u = !0;
           break;
         }
     }
     return c;
-  }, [P, R]), M = $(() => f > 0, [f]), C = $(
-    () => (f + 1) * m[y] < I.length,
-    [f, m, y, I.length]
+  }, [C, R]), M = $(() => f > 0, [f]), P = $(
+    () => (f + 1) * m[y] < L.length,
+    [f, m, y, L.length]
   ), g = Ae(() => {
     M && b((c) => c - 1);
   }, [M]), Q = Ae(() => {
-    C && b((c) => c + 1);
-  }, [C]), ee = $(() => {
+    P && b((c) => c + 1);
+  }, [P]), ee = $(() => {
     const c = (i) => () => {
       document.querySelectorAll(".sorting, .sorting_asc, .sorting_desc").forEach((u) => {
         u.classList.remove("sorting_asc"), u.classList.remove("sorting_desc"), u.classList.remove("sorting"), u.id != `col-${i.toLowerCase().split(" ").join("-")}` ? u.classList.add("sorting") : u.classList.add(`sorting${p ? "_asc" : "_desc"}`);
@@ -673,17 +673,17 @@ const fe = [10, 25, 50, 100], pr = (T = {
       )
     ) }) });
   }, [O, E, p]), D = $(() => {
-    let c = I.sort((i, u) => {
+    let c = L.sort((i, u) => {
       if (E in i && E in u) {
-        if (i[E] < u[E])
+        if (i[E].toLocaleLowerCase() < u[E].toLocaleLowerCase())
           return 1;
-        if (i[E] > u[E])
+        if (i[E].toLocaleLowerCase() > u[E].toLocaleLowerCase())
           return -1;
       }
       return 0;
     });
     return p ? c : c.reverse();
-  }, [I, E, p]), re = (c) => {
+  }, [L, E, p]), re = (c) => {
     N(Number(c.target.value)), b(0);
   };
   return /* @__PURE__ */ v.jsxs("div", { id: "employee-table_wrapper", className: "dataTables_wrapper no-footer", children: [
@@ -707,10 +707,10 @@ const fe = [10, 25, 50, 100], pr = (T = {
     /* @__PURE__ */ v.jsxs("table", { id: "employee-table", className: "display dataTable", children: [
       ee,
       /* @__PURE__ */ v.jsx("tbody", { children: D.filter((c, i) => {
-        const u = f * m[y], L = u + m[y];
-        return u <= i && i < L;
+        const u = f * m[y], I = u + m[y];
+        return u <= i && i < I;
       }).map(
-        (c, i) => /* @__PURE__ */ v.jsx("tr", { role: "row", className: `${i % 2 == 0 ? "odd" : "even"}`, children: O.map((u, L) => /* @__PURE__ */ v.jsx("td", { children: c[u.data] }, `elem-${i}-to-${L}`)) }, `data-line-${i}`)
+        (c, i) => /* @__PURE__ */ v.jsx("tr", { role: "row", className: `${i % 2 == 0 ? "odd" : "even"}`, children: O.map((u, I) => /* @__PURE__ */ v.jsx("td", { children: c[u.data] }, `elem-${i}-to-${I}`)) }, `data-line-${i}`)
       ) })
     ] }),
     /* @__PURE__ */ v.jsxs("div", { className: "dataTables_info", id: "employee-table_info", role: "status", children: [
@@ -753,7 +753,7 @@ const fe = [10, 25, 50, 100], pr = (T = {
       /* @__PURE__ */ v.jsx(
         "a",
         {
-          className: `paginate_button next ${C ? "" : "disabled"}`,
+          className: `paginate_button next ${P ? "" : "disabled"}`,
           "aria-controls": "employee-table",
           "data-dt-idx": "3",
           tabIndex: 0,

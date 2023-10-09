@@ -21,7 +21,6 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -48,7 +47,7 @@
     </li>
     <li><a href="#utilisation">Utilisation</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contributions">Contributions</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#remerciements">Remerciements</a></li>

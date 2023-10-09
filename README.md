@@ -123,6 +123,44 @@ Il y a 3 props à passer en paramètre de la data-table, mais seulement 2 obliga
 * columns : le nom des colones à afficher (parfois on ne veut pas tout les éléments du tableau de donnée)
 * nbElemPerPage : le nombre d'élément à afficher par page, par défaut on a 10, 25, 50 et 100.
 
+```tsx
+// import du composant
+import { DataTableComponent } from 'oc-14-hrnet-plugin-react-table';
+// import moche du css 
+import "../../node_modules/oc-14-hrnet-plugin-react-table/dist/style.css";
+// la syntaxe classique comporte un bug, ainsi on en peut pas encore utiliser : 
+// import 'oc-14-hrnet-plugin-react-table/dist/style.css'
+// ça aurait été joli mais pour le moment cette syntaxe ne fonctionne pas.
+
+const ComposantReact = () => {
+
+ // attention de bien reprendre le nom exact des propriétés dans columns
+ const data = useMemo(() => {
+  return [
+   { firstName: "toto", lastName: "dupond", age: 52 },
+   { firstName: "titi", lastName: "ronron", age: 41 },
+   { firstName: "toto", lastName: "dupont", age: 14 }
+  ]
+ }, [])
+
+ // Ici, on a choisi de ne pas prendre la colonne "age" donc le tableau aura 2 colonnes et non 3
+ const columns = useMemo(() => {
+  return [
+   { title: 'Prénom', data: 'firstName' },
+   { title: 'Nom de famille', data: 'lastName' },
+  ]
+ }, [])
+
+ // on change le système de pagination pour mettre 5, 10, 20 au lieu de 10, 25, 50 et 100.
+ const nbElementsPerPage = useMemo(() => [5, 10, 20], [])
+
+ // on ajoute les 3 props au composant
+ return (<div>
+  <DataTableComponent data={data} columns={columns} listNbPerPage={nbElementsPerPage} />
+ </div>);
+}
+```
+
 _Pour plus d'information, vous pouvez regarder le fonctionnement du plugin jquery [Documentation Plugin JQuery DataTables](https://github.com/DataTables/DataTables)_
 
 <p align="right">(<a href="#readme-top">haut de page</a>)</p>
@@ -131,9 +169,9 @@ _Pour plus d'information, vous pouvez regarder le fonctionnement du plugin jquer
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] ajouter les notes de version
 - [x] ajouter des exemples d'utilisation dans le readme
 - [ ] gérer le build du css pour importer le css plus facilement sans avoir le "node_module" dans le lien.
+- [ ] ajouter les notes de version
 
 Si vous voyez des problèmes, consulter les [open issues](https://github.com/victor-auffret/oc-14-hrnet-plugin-react-table/issues).
 

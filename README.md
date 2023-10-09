@@ -34,24 +34,24 @@
   <summary>Table des matières</summary>
   <ol>
     <li>
-      <a href="#about-the-project">A propos du projet</a>
+      <a href="#a-propos-du-projet">A propos du projet</a>
       <ul>
-        <li><a href="#built-with">Créé avec</a></li>
+        <li><a href="#créé-avec">Créé avec</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Commencer</a>
+      <a href="#commencer">Commencer</a>
       <ul>
-        <li><a href="#prerequisites">Prerequis</a></li>
+        <li><a href="#prérequis">Prerequis</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Utilisation</a></li>
+    <li><a href="#utilisation">Utilisation</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Remerciements</a></li>
+    <li><a href="#remerciements">Remerciements</a></li>
   </ol>
 </details>
 
@@ -194,6 +194,7 @@ Même si j'ai codé seul, il y a beaucoup de documentation qui m'a aidé pour r�
 [license-shield]: https://img.shields.io/github/license/victor-auffret/oc-14-hrnet-plugin-react-table.svg?style=for-the-badge
 [license-url]: https://github.com/victor-auffret/oc-14-hrnet-plugin-react-table/blob/master/LICENSE
 [data-table-screenshot]: img/screen1.png
+[node-js-screenshot]: img/nodejs.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [ViteJS]: https://vitejs.dev/

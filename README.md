@@ -46,6 +46,7 @@
       </ul>
     </li>
     <li><a href="#utilisation">Utilisation</a></li>
+    <li><a href="#choix-technique">Choix technique</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributions">Contributions</a></li>
     <li><a href="#license">License</a></li>
@@ -124,6 +125,7 @@ Il y a 3 props à passer en paramètre de la data-table, mais seulement 2 obliga
 * nbElemPerPage : le nombre d'élément à afficher par page, par défaut on a 10, 25, 50 et 100.
 
 ```tsx
+import { useMemo } from 'react';
 // import du composant
 import { DataTableComponent } from 'oc-14-hrnet-plugin-react-table';
 // import moche du css 
@@ -159,12 +161,28 @@ const ComposantReact = () => {
   <DataTableComponent data={data} columns={columns} listNbPerPage={nbElementsPerPage} />
  </div>);
 }
+
+export { ComposantReact }
 ```
 
 _Pour plus d'information, vous pouvez regarder le fonctionnement du plugin jquery [Documentation Plugin JQuery DataTables](https://github.com/DataTables/DataTables)_
 
 <p align="right">(<a href="#readme-top">haut de page</a>)</p>
 
+<!-- CHOIX TECHNIQUE -->
+## Choix technique
+
+Pour ce projet, j'aurai pu choisir d'utiliser redux mais j'ai choisi d'utiliser les hook de react et de me passer de nouvelle dépendance pour le projet afin de réduire la dette technique. 
+
+J'ai utilisé typescript afin d'avoir des erreurs plus visibles dans le code 
+
+J'ai repris le css du plugin jquery afin d'adapter le code jquery en code react sans toucher au css ce qui offre un visuel identique à la version jquery
+
+J'utilise vitejs pour build ce projet ce qui m'a permi de gagner du temps lors du développement. L'une des alternatives possible pour build ce type de composant react est rollup
+
+J'ai utilisé les images de flèche fourni par le plugin jquery, elles se trouvent dans le dossier src/images.
+
+<p align="right">(<a href="#readme-top">haut de page</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -235,15 +253,3 @@ Même si j'ai codé seul, il y a beaucoup de documentation qui m'a aidé pour r�
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [ViteJS]: https://vitejs.dev/
-
-
-# PLUGIN REACT DATA-TABLE
-
-Choix technique : 
-
-- utilisation de typescript 
-- utilisation du css de jquery afin de créer une réelle conversion du plugin 
-- utilisation de vite pour build 
-- utilisation des hooks pour gérer l'état du composant 
-- utilisation de classe dynamique pour les flèches de tri d'élément 
-- 

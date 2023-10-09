@@ -1,6 +1,6 @@
 import { FunctionComponent, useCallback, useMemo, useState } from 'react';
 
-//import "./style.css"
+import "./style.css"
 
 const SHOW = [10, 25, 50, 100]
 

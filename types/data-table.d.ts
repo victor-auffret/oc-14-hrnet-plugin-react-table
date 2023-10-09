@@ -1,5 +1,4 @@
 import { FunctionComponent } from 'react';
-import "./style.css";
 interface IColumn {
     title: string;
     data: string;

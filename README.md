@@ -252,5 +252,5 @@ Même si j'ai codé seul, il y a beaucoup de documentation qui m'a aidé pour r�
 [node-js-screenshot]: img/nodejs.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Vite.js]: https://vitejs.fr/logo-with-shadow.png
+[Vite.js]: img/vite.png
 [ViteJS]: https://vitejs.dev/

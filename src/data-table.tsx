@@ -4,24 +4,38 @@ import "./style.css"
 
 const SHOW = [10, 25, 50, 100]
 
-interface IColumn {
+/**
+ * @property title nom de la colonne à afficher
+ * @property data nom de la propriété du tableau data de IProps
+ * @interface
+ */
+export interface IColumn {
   title: string, /* l'intitulé de la colonne (peut contenir des espaces) */
   data: string /* le nom de la propriété de data à utiliser (ne contient pas d'espace) */
 }
 
-interface IProps {
+/**
+ * @property data - tableau de donnée avec des valeurs affichable sous forme de string
+ * @property columns - tableau de IColumn contenant le nom de la propriété et le titre de la colonne
+ * @property listNbPerPage - tableau contenant le nombre de page à afficher modifiable
+ * @interface
+ */
+export interface IProps {
   data: any[], /* oblige de garder any pour s'adapter aux utilisations */
   columns: IColumn[],
   listNbPerPage: number[]
+  /**
+  * @defaultValue [10, 25, 50, 100] si `listNbPerPage` est vide []
+  */
 }
 
 /**
  * DataTableComponent : Composant réact pour afficher un tableau de donnée avec un système de tri et de pagination
- * @param props 
- *  - data : les données à afficher, paramètre sous forme de tableau d'objet
- *  - columns : un tableau contenant la liste des propriétés de data à afficher en tant que colonne du tableau
- *  - listNbPerPage : un paramètre optionnel qui est un tableau contenant les entiers symbolisant le nombre d'élément par page (par défaut on a 10, 25, 50 et 100 éléments par page au choix)
- * @returns Composant React DataTableComponent
+ * @param props - propriétés react,
+ * @param props.data - les données à afficher, paramètre sous forme de tableau d'objet,
+ * @param props.columns - un tableau contenant la liste des propriétés de data à afficher en tant que colonne du tableau,
+ * @param props.listNbPerPage - un paramètre obligatoire mais qui peut être vide pour utiliser les valeurs par défaut,
+ * @returns FunctionComponent<IProps> - Composant React DataTableComponent
  */
 const DataTableComponent: FunctionComponent<IProps> = (props: IProps = {
   data: [],
@@ -245,7 +259,5 @@ const DataTableComponent: FunctionComponent<IProps> = (props: IProps = {
   </div>
 
 }
-
-export type { IColumn, IProps }
 
 export { DataTableComponent }

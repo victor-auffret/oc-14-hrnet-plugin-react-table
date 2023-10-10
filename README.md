@@ -122,7 +122,7 @@ Il y a 3 props à passer en paramètre de la data-table, mais seulement 2 obliga
 
 * data : les données brut à afficher sous forme de tableau
 * columns : le nom des colones à afficher (parfois on ne veut pas tout les éléments du tableau de donnée)
-* nbElemPerPage : le nombre d'élément à afficher par page, par défaut on a 10, 25, 50 et 100.
+* nbElemPerPage : le nombre d'élément à afficher par page, par défaut on a 10, 25, 50 et 100 mais il faut quand même passer un tableau vide en paramètre pour utiliser les valeurs par défaut.
 
 ```tsx
 import { useMemo } from 'react';
